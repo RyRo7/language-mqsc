@@ -1,0 +1,89 @@
+{
+  "scopeName": "source.mqsc",
+  "name": "MQSC",
+   "fileTypes":[
+      "mqsc"
+   ],
+   "patterns":[
+      {
+         "end":"\\n",
+         "begin":"*",
+         "name":"comment.line.mqsc"
+      },
+      {
+         "match":"\\b(ALTER|CLEAR|DEFINE|DELETE|DISPLAY|END|EXIT|PING|PURGE|QUIT|REFRESH|RESET|RESOLVE|RESUME|SET|START|STOP|SUSPEND)\\b",
+         "name":"keyword.control.plantuml"
+      },
+      {
+         "match":"\\b(AUTHINFO|CHANNEL|COMMINFO|LISTENER|NAMELIST|PROCESS|QALIAS|QLOCAL|QMGR|QMODEL|QREMOTE|SERVICE|SUB|TOPIC)\\b",
+         "name":"keyword.control.alter.plantuml"
+      },
+      {
+         "match":"\\b(AUTHINFO|CHANNEL|COMMINFO|LISTENER|NAMELIST|PROCESS|QALIAS|QLOCAL|QMGR|QMODEL|QREMOTE|SERVICE|SUB|TOPIC)\\b",
+         "name":"keyword.control.define.plantuml"
+      },
+      {
+         "match":"\\b(ACCTQ|BOQNAME|BOTHRESH|CFSTRUCT|CLCHNAME|CLUSNL|CLUSTER|CLWLPRTY|CLWLRANK|CLWLUSEQ|CMDSCOPE|CUSTOM|DEFBIND|DEFPRESP|DEFPRTY|DEFPSIST|DEFREADA|DEFSOPT|DEFTYPE|DESCR|DISTL|FORCE|GET|HARDENBO|NOHARDENBO|INDXTYPE|INITQ|LIKE|MAXDEPTH|MAXMSGL|MONQ|MSGDLVSQ|NOREPLACE|NPMCLASS|PROCESS|PROPCTL|PUT|QDEPTHHI|QDEPTHLO|QDPHIEV|QDPLOEV|QDPMAXEV|QSGDISP|QSVCIEV|QSVCINT|REPLACE|RETINTVL|RNAME|RQMNAME|SCOPE|SHARE|NOSHARE|STATQ|STGCLASS|TARGET|TARGQ|TARGTYPE|TRIGDATA|TRIGDPTH|TRIGGER|NOTRIGGER|TRIGMPRI|TRIGTYPE|USAGE|XMITQ)\\b",
+         "name":"keyword.control.define.parameters.plantuml"
+      },
+      {
+         "match":"\\b(AUTHINFO|AUTHREC|CHANNEL|COMMINFO|LISTENER|NAMELIST|POLICY|PROCESS|QALIAS|QLOCAL|QMODEL|QREMOTE|SERVICE|SUB|TOPIC)\\b",
+         "name":"keyword.control.delete.plantuml"
+      },
+      {
+         "match":"\\b(AUTHINFO|AUTHREC|AUTHSERV|CHANNEL|CHLAUTH|CHSTATUS|CLUSQMGR|COMMINFO|CONN|ENTAUTH|LISTENER|LSSTATUS|NAMELIST|POLICY|PROCESS|PUBSUB|QALIAS|QCLUSTER|QLOCAL|QMGR|QMODEL|QMSTATUS|QREMOTE|QSTATUS|QUEUE|SBSTATUS|SERVICE|SUB|SVSTATUS|TCLUSTER|TOPIC|TPSTATUS)\\b",
+         "name":"keyword.control.display.plantuml"
+      },
+      {
+         "match":"\\b(CHANNEL|QMGR)\\b",
+         "name":"keyword.control.ping.plantuml"
+      },
+      {
+         "match":"\\b(CHANNEL)\\b",
+         "name":"keyword.control.purge.plantuml"
+      },
+      {
+         "match":"\\b(CLUSTER|QMGR|SECURITY)\\b",
+         "name":"keyword.control.refresh.plantuml"
+      },
+      {
+         "match":"\\b(CHANNEL|CLUSTER|QMGR)\\b",
+         "name":"keyword.control.reset.plantuml"
+      },
+      {
+         "match":"\\b(CHANNEL)\\b",
+         "name":"keyword.control.resolve.plantuml"
+      },
+      {
+         "match":"\\b(CHANNEL|CHINIT|LISTENER|SERVICE)\\b",
+         "name":"keyword.control.start.plantuml"
+      },
+      {
+         "match":"\\b(CHANNEL|LISTENER|SERVICE|CONN)\\b",
+         "name":"keyword.control.stop.plantuml"
+      },
+      {
+         "name":"string.quoted.single.mqsc",
+         "begin":"([A-Za-z_0-9]+) +((-?->)|(<-?-)) +([A-Za-z_0-9]+)\\s*(:)",
+         "end":"\\n",
+         "beginCaptures": {
+            "1": { "name": "constant.string.mqsc" },
+            "2": { "name": "keyword.control.mqsc" },
+            "5": { "name": "constant.string.mqsc" }
+          }
+      },
+      {
+         "end":"'",
+         "begin":"'",
+         "name":"string.quoted.single.mqsc"
+      },
+      {
+         "match":"\\b[A-Z]+[A-Za-z_0-9]*\\b",
+         "name":"constant.string.mqsc"
+      },
+      {
+         "match":"\\b[a-z_]+[A-Za-z_0-9]*\\b",
+         "name":"variable.parameter.mqsc"
+      }
+   ]
+}

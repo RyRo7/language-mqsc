@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle language-mqsc",
+        "command": "language-mqsc:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "language-mqsc",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "language-mqsc:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
