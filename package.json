@@ -14,5 +14,13 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
+  },
+  "bugs": {
+    "url": "https://github.com/RyRo7/language-mqsc/issues"
+  },
+  "homepage": "https://github.com/RyRo7/language-mqsc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyRo7/language-mqsc.git"
   }
 }
